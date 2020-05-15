@@ -15,20 +15,27 @@ public class Chapter1Fig9 : MonoBehaviour
 
     public Color color = Color.white;
 
+    public int count = 1;
     // Declare a mover object
-    private Mover1_9 mover;
+    private List<Mover1_9> movers = new List<Mover1_9>();
 
     // Start is called before the first frame update
     void Start()
     {
         // Create a Mover object
-        mover = new Mover1_9(sphereSize, randomStrength, positionMin, positionMax, moveTowards, color);
+        for (int i = 0; i < count; i++)
+        {
+            movers.Add(new Mover1_9(sphereSize, randomStrength, positionMin, positionMax, moveTowards, color));
+        }
     }
 
     // Update is called once per frame forever and ever (until you quit).
-    void Update()
+    void FixedUpdate()
     {
-        mover.Update();
+        foreach(Mover1_9 mover in movers)
+        {
+            mover.Update();
+        }
     }
 }
 
