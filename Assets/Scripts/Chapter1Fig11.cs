@@ -70,6 +70,7 @@ public class Mover1_11
         mover.AddComponent<Rigidbody>();
         rb = mover.GetComponent<Rigidbody>();
         rb.useGravity = false;
+        rb.mass = size * 0.2f;
         mover.transform.localScale = Vector3.one * size;
         minPos = min;
         maxPos = max;
@@ -86,7 +87,7 @@ public class Mover1_11
     public void AccelerateTowards(Vector3 target, float strength) 
     {
         Vector3 directionOfTravel = target - mover.transform.position;
-        rb.AddForce(directionOfTravel.normalized * strength);
+        rb.AddForce(directionOfTravel.normalized * strength, ForceMode.Impulse);
     }
 
     public void Update()

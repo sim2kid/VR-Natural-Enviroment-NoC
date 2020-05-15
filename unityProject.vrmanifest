@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.natureofcodefinal.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "E:\\2simm\\Documents\\Unity\\2019.1.10f1\\School Unity Projects\\Nature Of Code Final\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "E:\\2simm\\Documents\\Unity\\2019.1.10f1\\School Unity Projects\\Nature-Of-Code-Final\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
           "name": "Nature Of Code Final [Testing]"
